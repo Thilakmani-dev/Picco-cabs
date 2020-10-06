@@ -231,7 +231,7 @@ p{
   color:black;
   font-weight:bolder;
   border-radius:10px;
-  background-color: #f7f7f7;
+  background-color: white;
 }
 .nav-item a.active{
   background-color: #a7be38;
@@ -424,7 +424,7 @@ a {
     color: #ffffff;
   }
   .center-heading .text-center{
-    margin:50px 0;
+    margin:10px 0;
   }
   .center-text {
     text-align: center;
