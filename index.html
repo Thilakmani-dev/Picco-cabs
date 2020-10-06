@@ -18,6 +18,9 @@
     <title>Picco cabs Madurai</title>
 </head>
 <body>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+    </div>
   <div class="nav-wrapper">
   <nav class="navbar">
     <a href="#">
@@ -653,7 +656,7 @@
       </div>
       </div>
   </div>
-		<div class="row py-5">
+		<div class="row py-5" onmousemove="startCounter()" onkeydown="startCounter()" onmouseover="startCounter()">
 			<div class="col-lg-3 stats">
 				<i class="fa fa-taxi" aria-hidden="true"></i>
 				<div class="my-2 counting" data-count="600">0</div>
@@ -674,7 +677,7 @@
 
 			<div class="col-lg-3 stats">
 <i class="fa fa-shield" aria-hidden="true"></i>
-				<div class="my-2 counting" data-count="999">0</div>
+				<div class="my-2 counting" data-count="500">0</div>
 				<h5 class="my-2">Trusted Vehicles</h5>
 			</div>
 
@@ -694,8 +697,8 @@
     </div>
     </div>
 </div>
-<!-- carousel-->
-<div class="container mb-5" style="width:400px">
+  <div class="row my-1 py-1 justify-content-center">
+    <div class="col-md-6 col-sm-10 mx-1">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -733,6 +736,8 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
+</div>
 </div>
 </div>
 <!-- about us-->
@@ -917,7 +922,7 @@
       </div>
     </div>
     <div class="row justify-content-center">
-			<div class="col-md-6 col-xs-12 mx-auto pb-4">
+			<div class="col-md-6 col-xs-6 mx-2 px-2">
         <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3930.2054855433!2d78.12485339814957!3d9.916837259505712!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5c0f79cd9a76f481!2sPicco%20cabs!5e0!3m2!1sen!2sin!4v1601530520424!5m2!1sen!2sin"
         id="map"
@@ -927,10 +932,11 @@
         allowfullscreen=""
         aria-hidden="false"
         tabindex="0"
+        class="img-fluid"
       ></iframe>
 			</div>
 		</div>
-		<div class="col d-flex justify-content-center mb-4 socio">
+		<div class="col d-flex justify-content-center my-4 socio">
 			<a href="https://www.facebook.com/piccocab" class="d-block px-3" target="_blank"><i class="fab fa-facebook fa-2x"></i></a><a href="https://instagram.com/piccocabs" class="d-block px-3" target="_blank"><i class="fab fa-instagram fa-2x"></i></a><a href="https://api.whatsapp.com/send?phone=919159157070" class="d-block px-3" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a><a href="mailto:piccocabs@gmail.com" class="d-block px-3"><i class="fab fa-google fa-2x"></i></a>
 		</div>
 		<p class="text-center text-secondary border-top border-secondary py-4">
@@ -955,6 +961,38 @@ $('.menu-toggle').click(function(){
    $(this).toggleClass("is-active");
 })
 });
+
+const counters = document.querySelectorAll(".counting");
+const speed =100;
+
+function startCounter() {
+   counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-count')
+      const count = +counter.innerText;
+
+      const inc = target / speed;
+      console.log(inc)
+      if (count < target) {
+        counter.innerText = count + inc;
+        setTimeout(updateCount, 25);
+      } else {
+        count.innerText = target;
+      }
+
+    }
+    updateCount();
+  })
+}
+
+  window.onscroll = function () { myFunction() };
+
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
 
 </script>       
 </body>
