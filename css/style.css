@@ -642,3 +642,9 @@ section#counter-stats {
     height: 400px;
   }
 }
+@media only screen and (min-width : 768px) {
+  .carousel-caption
+  {
+    top: 46%;
+  }
+}
