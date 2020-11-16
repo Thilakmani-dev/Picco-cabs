@@ -575,6 +575,7 @@ a {
     line-height: 26px;
     position: relative;
     z-index: 2;
+    text-align: center;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
