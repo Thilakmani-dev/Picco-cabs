@@ -108,7 +108,6 @@ p{
   margin-right: 25px;
   display: none;
 }
-
 .menu-toggle:hover{
   cursor: pointer;
 }
@@ -172,7 +171,7 @@ p{
   .navbar li a {
     font-size: 1rem;
   }
-   
+  
   .menu-toggle, .bar {
     display: block;
     cursor: pointer;

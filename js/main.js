@@ -29,3 +29,9 @@ function startCounter() {
     var scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
   }
+
+
+  /*function closeNav(){
+    var navEle = document.querySelector('.no-search');
+    navEle.style.display='none';
+  }*/

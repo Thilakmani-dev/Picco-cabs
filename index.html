@@ -17,8 +17,8 @@
      <script src="https://kit.fontawesome.com/c3b295575f.js" crossorigin="anonymous"></script>
     <title>Picco cabs Madurai</title>
 </head>
-<body>
-  <div class="nav-wrapper">
+<body onload="startCounter()">
+  <div class="nav-wrapper" id="navigation">
   <nav class="navbar">
     <a href="#">
       <img src="assets/images/logo.png" alt="Picco cabs">
@@ -30,7 +30,7 @@
     </div>
     <ul class="nav no-search">
       <li class="nav-item1 active"><a href="#">Home</a></li>
-      <li class="nav-item1"><a href="/pages/about.html">About Us</a></li>
+      <li class="nav-item1"><a href="#aboutus">About Us</a></li>
       <li class="nav-item1"><a href="#offers">Offers</a></li>
       <li class="nav-item1"><a href="#footer">Contact</a></li>
     </ul>
@@ -659,7 +659,7 @@ activities. Min 2pax
       </div>
       </div>
   </div>
-		<div class="row py-5" onmousemove="startCounter()" onkeydown="startCounter()" onmouseover="startCounter()">
+		<div class="row py-5">
 			<div class="col-lg-3 stats">
 				<i class="fa fa-taxi" aria-hidden="true"></i>
 				<div class="my-2 counting" data-count="600">0</div>
@@ -778,7 +778,7 @@ activities. Min 2pax
                 travel companies in South India. While we remain the B2B operator for various popular
                 aggregators.We are now available for direct booking to ensure the customers gets cabs for
                 best prices.</h5>
-              <a href='/pages/about.html'><button type="button" class="btn btn-light">Read more</button></a>
+              <a href='#header'><button type="button" class="btn btn-light">Book A Cab</button></a>
           </div>
         </div>
         </div>
